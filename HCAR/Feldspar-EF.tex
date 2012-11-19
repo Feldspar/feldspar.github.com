@@ -1,0 +1,33 @@
+% Feldspar-EF.tex
+\begin{hcarentry}[updated]{Feldspar}
+\label{feldspar}
+\report{Emil Axelsson}%11/12
+\status{active development}
+\makeheader
+
+Feldspar is a domain-specific language for digital signal processing (DSP). The
+language is embedded in Haskell and developed in co-operation by Ericsson,
+Chalmers University of Technology (G\"oteborg, Sweden) and E\"otv\"os Lor\'and
+(ELTE) University (Budapest, Hungary).
+
+The motivating application of Feldspar is telecoms processing, but the language
+is intended to be useful for DSP in general. The aim is to allow DSP functions
+to be written in pure functional style in order to raise the abstraction level of
+the code and to enable more high-level optimizations. The current version consists
+of an extensive library of numeric and array processing operations as well as a
+code generator producing C code for running on embedded targets.
+
+The current version deals with the data-intensive numeric algorithms which are
+at the core of any DSP application. We have recently added support for the expression
+and compilation of parallel algorithms. As future work remains to extend the language
+to deal with interaction with the environment (e.g., processing of streaming data) and
+to support compilation to heterogeneous multi-core targets.
+
+\FurtherReading
+\begin{compactitem}
+\item \url{https://github.com/Feldspar/feldspar-language}
+\item \url{http://hackage.haskell.org/package/feldspar-language}
+\item \url{http://hackage.haskell.org/package/feldspar-compiler}
+\end{compactitem}
+\end{hcarentry}
+
