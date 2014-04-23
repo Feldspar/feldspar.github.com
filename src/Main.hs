@@ -33,6 +33,6 @@ main = hakyllWith config $ do
 
 config :: Configuration
 config = defaultConfiguration
-    { deployCommand = "rsync --checksum -av _site/* ../"
+    { deployCommand = "rsync --checksum -av _site/* ../ && git add .. && git ci -m \"Generated from `git rev-parse HEAD`\""
     }
                               
