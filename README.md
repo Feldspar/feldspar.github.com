@@ -13,8 +13,9 @@
 
     cd src
     cabal run build
+    cabal run check
 
-Check that the site looks ok
+Check that the site looks ok and then deploy
 
     cabal run deploy
 
