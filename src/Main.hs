@@ -5,7 +5,7 @@ import Hakyll
 import GhcArgs (ghcArgs)
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
     cargs <- preprocess ghcArgs
 
     match "bootstrap/css/bootstrap.min.css" $ do
@@ -30,3 +30,9 @@ main = hakyll $ do
         compile copyFileCompiler
 
     match "templates/*" $ compile templateCompiler
+
+config :: Configuration
+config = defaultConfiguration
+    { deployCommand = "rsync --checksum -av _site/* ../"
+    }
+                              
