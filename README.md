@@ -4,7 +4,17 @@
 
 `hakyll`'s dependencies are a bit awkward, so use a sandbox:
 
+    cd src
     cabal sandbox init
     cabal install
-    .cabal-sandbox/bin/feldspar.github.com watch
+    cabal run watch
+
+### Building and deploying
+
+    cd src
+    cabal run build
+
+Check that the site looks ok
+
+    cabal run deploy
 
