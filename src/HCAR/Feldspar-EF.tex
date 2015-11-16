@@ -1,7 +1,7 @@
 % Feldspar-EF.tex
-\begin{hcarentry}{Feldspar}
+\begin{hcarentry}[updated]{Feldspar}
 \label{feldspar}
-\report{Emil Axelsson}%11/14
+\report{Emil Axelsson}%11/15
 \status{active development}
 \makeheader
 
@@ -17,9 +17,18 @@ abstraction level of the code and to enable more high-level optimizations. The
 current version consists of a library of numeric and array processing operations
 as well as a code generator producing C code for running on embedded targets.
 
-The official packages \href{http://hackage.haskell.org/package/feldspar-language}{feldspar-language} and \href{http://hackage.haskell.org/package/feldspar-compiler}{feldspar-compiler} contain the language for pure computations and its C back end, respectively.
+The official packages
+\href{http://hackage.haskell.org/package/feldspar-language}{feldspar-language}
+and
+\href{http://hackage.haskell.org/package/feldspar-compiler}{feldspar-compiler}
+contain the language for pure computations and its C back end, respectively.
 
-Additionally, \href{https://github.com/emilaxelsson/feldspar-io}{feldspar-io} (not yet released, but fully usable) adds an ``IO-like'' monad for making interactive Feldspar programs and binding to external C libraries. Ongoing work involves using \pre|feldspar-io| to implement more high-level libraries for streaming and interactive programs. Two examples of such libraries are:
+Additionally, \href{https://github.com/emilaxelsson/feldspar-io}{feldspar-io}
+(not yet released, but fully usable) adds an ``IO-like'' monad for making
+interactive Feldspar programs and binding to external C libraries. Ongoing
+work involves using {\tt feldspar-io} to implement more high-level libraries
+for streaming and interactive programs. Two examples of such libraries are:
+
 \begin{compactitem}
 \item \href{https://github.com/emilaxelsson/feldspar-synch}{feldspar-synch} -- a synchronous data-flow library
 \item \href{https://github.com/koengit/zeldspar}{zeldspar} -- a Ziria-like EDSL
