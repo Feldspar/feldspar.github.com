@@ -23,20 +23,29 @@ and
 \href{http://hackage.haskell.org/package/feldspar-compiler}{feldspar-compiler}
 contain the language for pure computations and its C back end, respectively.
 
-Additionally, \href{https://github.com/emilaxelsson/feldspar-io}{feldspar-io}
-(not yet released, but fully usable) adds an ``IO-like'' monad for making
-interactive Feldspar programs and binding to external C libraries. Ongoing
-work involves using {\tt feldspar-io} to implement more high-level libraries
+Additionally, we are working on a completely new implementation of Feldspar,
+\href{https://github.com/emilaxelsson/raw-feldspar}{RAW-Feldspar} (not yet
+released, but fully usable). This implementation uses a slightly different
+language design that gives better control over things like memory allocation. It
+also extends Feldspar with a monad that supports interaction with the operating
+system, calls to external C libraries, concurrency, etc.
+
+Ongoing work involves using RAW-Feldspar to implement more high-level libraries
 for streaming and interactive programs. Two examples of such libraries are:
 
 \begin{compactitem}
-\item \href{https://github.com/emilaxelsson/feldspar-synch}{feldspar-synch} -- a synchronous data-flow library
 \item \href{https://github.com/koengit/zeldspar}{zeldspar} -- a Ziria-like EDSL
+\item \href{https://github.com/emilaxelsson/feldspar-synch}{feldspar-synch} -- a synchronous data-flow library
 \end{compactitem}
+
+\href{https://github.com/kmate/raw-feldspar-mcs}{raw-feldspar-mcs} is a
+library built on top of RAW-Feldspar that generates code for running on NUMA
+architectures such as the \href{http://www.parallella.org}{Parallella}.
+
+There is also ongoing work to generate VHDL from RAW-Feldspar programs.
 
 \FurtherReading
 \begin{compactitem}
 \item Official home page: \url{http://feldspar.github.io}
-\item \href{http://www.cse.chalmers.se/~emax/documents/persson2015programmable.pdf}{Recent paper (TFP 2015)} about controlling the signatures of generated C functions
 \end{compactitem}
 \end{hcarentry}
