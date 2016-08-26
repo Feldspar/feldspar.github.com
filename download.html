@@ -39,11 +39,18 @@
             <div class="page-header">
               <h1>Downloads</h1>
             </div>
-            <p>Feldspar is split in two packages that can be downloaded from Hackage:</p>
-<p><a href="http://hackage.haskell.org/package/feldspar-language">Feldspar-language</a> which is always necessary.</p>
-<p><a href="http://hackage.haskell.org/package/feldspar-compiler">Feldspar-compiler</a> which is only needed if you want to generate C-code.</p>
-<p>Type cabal install <package> in your terminal window if you have the <a href="http://haskell.org/platform">Haskell Platform</a> installed.</p>
-          
+            <h2 id="raw-feldspar">RAW-Feldspar</h2>
+            <p>The currently recommended Feldspar implementation is <a href="https://github.com/Feldspar/raw-feldspar">raw-feldspar</a>.</p>
+            <h2 id="original-feldspar">Original Feldspar</h2>
+            <p>The original implementation is split into two packages:</p>
+            <ul>
+            <li><a href="http://hackage.haskell.org/package/feldspar-language">feldspar-language</a> – the language front end</li>
+            <li><a href="http://hackage.haskell.org/package/feldspar-compiler">feldspar-compiler</a> – the C-generating back end</li>
+            </ul>
+            <h2 id="installation">Installation</h2>
+            <p>Type</p>
+            <pre><code>cabal install &lt;package-name&gt;</code></pre>
+            <p>in your terminal window if you have the <a href="http://haskell.org/platform">Haskell Platform</a> installed.</p>
         </div>
     </body>
 </html>
