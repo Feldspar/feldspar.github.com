@@ -6,29 +6,31 @@
 \makeheader
 
 Feldspar is a domain-specific language for digital signal processing (DSP). The
-language is embedded in Haskell and is currently being developed by projects at
-Chalmers University of Technology, SICS Swedish ICT AB and
-Ericsson AB.
+language is embedded in Haskell and has been developed as a collaboration, in
+different phases, between Chalmers University of Technology, ELTE University,
+SICS Swedish ICT AB and Ericsson AB.
 
 The motivating application of Feldspar is telecoms processing, but the language
-is intended to be useful for DSP and numeric code in general. The aim is to
-allow functions to be written in pure functional style in order to raise the
-abstraction level of the code and to enable more high-level optimizations. The
-current version consists of a library of numeric and array processing operations
-as well as a code generator producing C code for running on embedded targets.
+is intended to be useful for DSP and numeric code in general as well as for
+programming embedded systems. The aim is to allow functions to be written in
+functional style in order to raise the abstraction level of the code and to
+enable more high-level optimizations.
 
-The official packages
-  \mbox{\href{http://hackage.haskell.org/package/feldspar-language}{feldspar-language}}
-and
-  \mbox{\href{http://hackage.haskell.org/package/feldspar-compiler}{feldspar-compiler}}
-contain the language for pure computations and its C back end, respectively.
+The currently recommended Feldspar implementation is
+\mbox{\href{http://hackage.haskell.org/package/raw-feldspar}{RAW-Feldspar}}.
+Its
+\mbox{\href{https://github.com/Feldspar/raw-feldspar/blob/master/README.md}{README}}
+file is a good starting point for getting to know Feldspar.
 
-Additionally, we are working on a completely new implementation of Feldspar,
-\href{https://github.com/emilaxelsson/raw-feldspar}{RAW-Feldspar} (not yet
-released, but fully usable). This implementation uses a slightly different
-language design that gives better control over things like memory allocation. It
-also extends Feldspar with a monad that supports interaction with the operating
-system, calls to external C libraries, concurrency, etc.
+RAW-Feldspar provides libraries for numeric and array processing operations, and
+supports file handling, calls to external C libraries, concurrency, etc. It also
+comes with a code generator producing C code for running on embedded targets.
+
+For reference, the original Feldspar implementation is available in the packages
+\begin{compactitem}
+\item \href{http://hackage.haskell.org/package/feldspar-language}{feldspar-language} -- language front end
+\item \href{http://hackage.haskell.org/package/feldspar-compiler}{feldspar-compiler} -- C back end
+\end{compactitem}
 
 Ongoing work involves using RAW-Feldspar to implement more high-level libraries
 for streaming and interactive programs. Two examples of such libraries are:
@@ -42,7 +44,8 @@ for streaming and interactive programs. Two examples of such libraries are:
 library built on top of RAW-Feldspar that generates code for running on NUMA
 architectures such as the \href{http://www.parallella.org}{Parallella}.
 
-There is also ongoing work to generate VHDL from RAW-Feldspar programs.
+There is also ongoing work to support hardware/software co-design in
+RAW-Feldspar.
 
 \FurtherReading
 \begin{compactitem}
